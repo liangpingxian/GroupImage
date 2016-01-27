@@ -13,6 +13,10 @@
 		B62B98021C55FBFF0042D4A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B62B98001C55FBFF0042D4A2 /* Main.storyboard */; };
 		B62B98041C55FBFF0042D4A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B62B98031C55FBFF0042D4A2 /* Assets.xcassets */; };
 		B62B98071C55FBFF0042D4A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B62B98051C55FBFF0042D4A2 /* LaunchScreen.storyboard */; };
+		B62B983C1C55FCF00042D4A2 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = B62B98101C55FCF00042D4A2 /* NSString+Additions.m */; };
+		B62B983D1C55FCF00042D4A2 /* UIImage+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = B62B98121C55FCF00042D4A2 /* UIImage+Additions.m */; };
+		B62B98531C55FDC90042D4A2 /* UIColor+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = B62B98521C55FDC90042D4A2 /* UIColor+Additions.m */; };
+		B67755EE1C587839001A8108 /* GroupView.m in Sources */ = {isa = PBXBuildFile; fileRef = B67755ED1C587839001A8108 /* GroupView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,14 @@
 		B62B98031C55FBFF0042D4A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B62B98061C55FBFF0042D4A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B62B98081C55FBFF0042D4A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B62B980F1C55FCF00042D4A2 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
+		B62B98101C55FCF00042D4A2 /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additions.m"; sourceTree = "<group>"; };
+		B62B98111C55FCF00042D4A2 /* UIImage+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Additions.h"; sourceTree = "<group>"; };
+		B62B98121C55FCF00042D4A2 /* UIImage+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Additions.m"; sourceTree = "<group>"; };
+		B62B98511C55FDC90042D4A2 /* UIColor+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Additions.h"; sourceTree = "<group>"; };
+		B62B98521C55FDC90042D4A2 /* UIColor+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Additions.m"; sourceTree = "<group>"; };
+		B67755EC1C587839001A8108 /* GroupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupView.h; sourceTree = "<group>"; };
+		B67755ED1C587839001A8108 /* GroupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,8 @@
 		B62B97F61C55FBFF0042D4A2 /* GroupImage */ = {
 			isa = PBXGroup;
 			children = (
+				B62B980E1C55FCF00042D4A2 /* category */,
+				B62B98131C55FCF00042D4A2 /* groupImage */,
 				B62B97FA1C55FBFF0042D4A2 /* AppDelegate.h */,
 				B62B97FB1C55FBFF0042D4A2 /* AppDelegate.m */,
 				B62B97FD1C55FBFF0042D4A2 /* ViewController.h */,
@@ -77,6 +91,28 @@
 				B62B97F81C55FBFF0042D4A2 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B62B980E1C55FCF00042D4A2 /* category */ = {
+			isa = PBXGroup;
+			children = (
+				B62B980F1C55FCF00042D4A2 /* NSString+Additions.h */,
+				B62B98101C55FCF00042D4A2 /* NSString+Additions.m */,
+				B62B98111C55FCF00042D4A2 /* UIImage+Additions.h */,
+				B62B98121C55FCF00042D4A2 /* UIImage+Additions.m */,
+				B62B98511C55FDC90042D4A2 /* UIColor+Additions.h */,
+				B62B98521C55FDC90042D4A2 /* UIColor+Additions.m */,
+			);
+			path = category;
+			sourceTree = "<group>";
+		};
+		B62B98131C55FCF00042D4A2 /* groupImage */ = {
+			isa = PBXGroup;
+			children = (
+				B67755EC1C587839001A8108 /* GroupView.h */,
+				B67755ED1C587839001A8108 /* GroupView.m */,
+			);
+			path = groupImage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,7 +186,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B62B97FF1C55FBFF0042D4A2 /* ViewController.m in Sources */,
+				B67755EE1C587839001A8108 /* GroupView.m in Sources */,
+				B62B98531C55FDC90042D4A2 /* UIColor+Additions.m in Sources */,
+				B62B983C1C55FCF00042D4A2 /* NSString+Additions.m in Sources */,
 				B62B97FC1C55FBFF0042D4A2 /* AppDelegate.m in Sources */,
+				B62B983D1C55FCF00042D4A2 /* UIImage+Additions.m in Sources */,
 				B62B97F91C55FBFF0042D4A2 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,6 +338,7 @@
 				B62B980D1C55FBFF0042D4A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
