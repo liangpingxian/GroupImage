@@ -21,9 +21,6 @@ static inline float radians(double degrees) { return degrees * M_PI / 180; }
 {
     
     
-    self.layer.borderColor = [UIColor blackColor].CGColor;
-    self.layer.borderWidth = .5;
-    
     CGFloat viewWidth = 100;
     
     ///内角
@@ -100,10 +97,19 @@ static inline float radians(double degrees) { return degrees * M_PI / 180; }
 {
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(center.x - rad,center.y - rad, 2 *rad, 2 *rad)];
     imageView.layer.cornerRadius = rad;
-    imageView.tag = index + 1;
-    imageView.image = [[UIImage imageWithString:[NSString stringWithFormat:@"%ld",index] width:100] circleImageWithSmallInsert];
+    imageView.layer.masksToBounds = YES;
+    UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"%ld.jpg",(long)index]];
+    if(!image){
+        image = [UIImage imageWithString:[NSString stringWithFormat:@"%ld哥",(long)index] width:100];
+    }
+    
+    imageView.image = image;
+    
     [self addSubview:imageView];
     
+    
+    //圆环白条处理
+    imageView.image = [imageView.image circleImageWithSmallInsert];
     if(totalCount > 2 && index == totalCount - 1){
         
         imageView.image = [imageView.image cuttingImageRightWithAngle:angle/2];
